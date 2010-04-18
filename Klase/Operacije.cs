@@ -10,6 +10,7 @@ namespace Klase
         private char _operacija;
         private double _b;
         private double _a;
+        private TipOperacije _tip;
 
 
         private Operacije(double a, double b, char operacija)
@@ -17,16 +18,11 @@ namespace Klase
             _a = a;
             _b = b;
             _operacija = operacija;
+            _tip = new TipOperacije();
         }
         public double racunaj()
         {
-            if (_operacija == '+')
-                return _a + _b;
-            if (_operacija == '-')
-                return _a - _b;
-            if (_operacija == '*')
-                return _a * _b;
-            else return _a / _b;
+            return _tip.racunaj(this);
         }
         public static Operacije sabiranje(double a, double b)
         {
@@ -43,6 +39,22 @@ namespace Klase
         public static Operacije deljenje(double a, double b)
         {
             return new Operacije(a, b, '/');
+        }
+
+        public double A
+        {
+            get { return _a; }
+            set { _a = value; }
+        }
+        public double B
+        {
+            get { return _b; }
+            set { _b = value; }
+        }
+        public char Operacija
+        {
+            get { return _operacija; }
+            set { _operacija = value; }
         }
     }
 }
