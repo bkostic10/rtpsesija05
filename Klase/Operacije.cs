@@ -13,12 +13,12 @@ namespace Klase
         private TipOperacije _tip;
 
 
-        private Operacije(double a, double b, char operacija)
+        private Operacije(double a, double b, char operacija, TipOperacije tip)
         {
             _a = a;
             _b = b;
             _operacija = operacija;
-            _tip = new TipOperacije();
+            _tip = tip;
         }
         public double racunaj()
         {
@@ -26,19 +26,19 @@ namespace Klase
         }
         public static Operacije sabiranje(double a, double b)
         {
-            return new Operacije(a, b, '+');
+            return new Operacije(a, b, '+', new TipOperacije());
         }
         public static Operacije oduzimanje(double a, double b)
         {
-            return new Operacije(a, b, '-');
+            return new Operacije(a, b, '-', new TipOperacije());
         }
         public static Operacije mnozenje(double a, double b)
         {
-            return new Operacije(a, b, '*');
+            return new Operacije(a, b, '*', new TipOperacije());
         }
         public static Operacije deljenje(double a, double b)
         {
-            return new Operacije(a, b, '/');
+            return new Operacije(a, b, '/', new TipOperacije());
         }
 
         public double A
