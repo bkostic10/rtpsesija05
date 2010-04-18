@@ -11,6 +11,7 @@ namespace Klase
         private double _b;
         private double _a;
 
+
         private Operacije(double a, double b, char operacija)
         {
             _a = a;
