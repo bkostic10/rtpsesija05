@@ -49,8 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Deljenje.cs" />
+    <Compile Include="Mnozenje.cs" />
+    <Compile Include="Oduzimanje.cs" />
     <Compile Include="Operacije.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sabiranje.cs" />
     <Compile Include="TipOperacije.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

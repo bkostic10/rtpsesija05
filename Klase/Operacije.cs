@@ -26,19 +26,19 @@ namespace Klase
         }
         public static Operacije sabiranje(double a, double b)
         {
-            return new Operacije(a, b, '+', new TipOperacije());
+            return new Operacije(a, b, '+', new Sabiranje());
         }
         public static Operacije oduzimanje(double a, double b)
         {
-            return new Operacije(a, b, '-', new TipOperacije());
+            return new Operacije(a, b, '-', new Oduzimanje());
         }
         public static Operacije mnozenje(double a, double b)
         {
-            return new Operacije(a, b, '*', new TipOperacije());
+            return new Operacije(a, b, '*', new Mnozenje());
         }
         public static Operacije deljenje(double a, double b)
         {
-            return new Operacije(a, b, '/', new TipOperacije());
+            return new Operacije(a, b, '/', new Deljenje());
         }
 
         public double A
